@@ -7,16 +7,27 @@ Generate diff
 Usage:
     gendiff (-h|--help)
     gendiff (-v|--version)
+    gendiff [--format <fmt>] <firstFile> <secondFile>
 
 Options:
     -h --help           Show this screen
     -v --version        Show version
+    --format <fmt>      Report format [default: stylish]
 
 DOC;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use \Docopt as Docopt;
+use function \Php\Project\Lvl2\Gendiff\gendiff as gendiff;
+
 $args = Docopt::handle($doc, array('version'=> 'Generate diff 0.1'));
-foreach ($args as $k=>$v)
-    echo $k.': '.json_encode($v).PHP_EOL;
+
+$first = $args["<firstFile>"];
+$second = $args["<secondFile>"];
+
+gendiff($first, $second);
+
+// foreach ($args as $k=>$v)
+    // echo $k.': '.json_encode($v).PHP_EOL;
+
