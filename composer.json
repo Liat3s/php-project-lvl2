@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "Gendiff - see the difference between files.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "docopt/docopt": "^1.0"
+    },
+    "bin": ["bin/gendiff"]
+}
