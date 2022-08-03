@@ -21,12 +21,14 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use \Docopt as Docopt;
 use function \Php\Project\Lvl2\Gendiff\gendiff as gendiff;
 
-$args = Docopt::handle($doc, array('version'=> 'Generate diff 0.1'));
+$args = Docopt::handle($doc, array('version'=> 'Generate diff 0.3'));
 
 $first = $args["<firstFile>"];
 $second = $args["<secondFile>"];
 
-gendiff($first, $second);
+$diff = gendiff($first, $second);
+
+print_r($diff);
 
 // foreach ($args as $k=>$v)
     // echo $k.': '.json_encode($v).PHP_EOL;

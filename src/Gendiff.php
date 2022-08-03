@@ -29,5 +29,5 @@ function gendiff($pathA, $pathB)
             $result .= (' - ' . $key . ': ' . $fileA->$key . "\n");
         }
     }
-    echo $result;
+    return $result;
 }
