@@ -16,7 +16,7 @@ function gendiff($pathA, $pathB)
     \sort($keys);
 
     foreach ($keys as $key) {
-        if(isset($fileA->$key) && isset($fileB->$key)) {
+        if (isset($fileA->$key) && isset($fileB->$key)) {
             if ($fileA->$key === $fileB->$key) {
                 $result .= ('   ' . $key . ': ' . $fileA->$key . "\n");
             } else {

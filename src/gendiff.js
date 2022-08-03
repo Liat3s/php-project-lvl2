@@ -17,7 +17,7 @@ let j2 = {
 
 for (let key of new Set(keys.sort())) {
     if (j1[key] && j2[key]) {
-        if(j1[key] === j2[key]) {
+        if (j1[key] === j2[key]) {
             console.log('   ', key, ': ', j1[key]);
         } else {
             console.log(' - ', key, ': ', j1[key]);
